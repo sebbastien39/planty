@@ -4,8 +4,8 @@ body * {
    font-family: 'Syne', sans-serif;
 }
 /* On applique un gris plus clair sur les paragraphes */
-p {
-   color: #313332;
+h1 {
+   color: green;
 }
 /* La classe 'hover-effect' permettra de créer un effet de zoom quand l'on passera la souris par dessus les elements images enfants  */
 .hover-effect img {
@@ -15,4 +15,20 @@ p {
 .hover-effect img:hover {
    transition: all 0.33s ease-in-out;
    transform: scale(1.05) translateY(-10px);
+}
+
+
+
+/*logo en haut à droite*/
+
+/* PLANTY */
+
+{
+   position: absolute;
+left: 0%;
+right: 4.67%;
+top: 0.1%;
+bottom: 0.61%;
+
+background: #DC9F96;
 }
