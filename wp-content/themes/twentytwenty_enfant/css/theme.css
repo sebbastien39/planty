@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne&display=swap');
+/* Import de la font syne depuis Google Fonts et on l'applique sur tous les éléments de la page */
+body * {
+   font-family: 'Syne', sans-serif;
+}
+/* On applique un gris plus clair sur les paragraphes */
+p {
+   color: #313332;
+}
+/* La classe 'hover-effect' permettra de créer un effet de zoom quand l'on passera la souris par dessus les elements images enfants  
+.hover-effect img {
+   transition: all 0.33s ease-in-out;
+   transform: scale(1) translateY(0px);
+}
+.hover-effect img:hover {
+   transition: all 0.33s ease-in-out;
+   transform: scale(1.05) translateY(-10px);
+}
+*/
+
+/* Apparence du menu*/
+
+li.menu-item a {
+    color: #313332 !important;
+    display: inline-block;
+    padding: 10px 25px;
+    text-align: center;
+    
+ }
+ 
+ li.menu-item a:hover,
+ li.menu-item.current-menu-item a {
+    color: #313332 !important;
+    text-decoration: none !important;/*enlever la ligne sous le lien*/
+    font-weight: bold;
+    
+ }
+
+/* Bouton Commander */
+
+.commande {
+   background-color: #E0B9B4;;
+   text-decoration: white;
+}
+
+.commande li.menu-item a{
+   color: white;
+}
+
+
+ /*.pre {
+    background-color: #E0B9B4 !important;
+    color: #ffffff !important;
+}
+
+.pre li.menu-itm a {
+   color: white;
+}*/
+
+/* FOOTER */
+
+.footer-mentions a {
+   display: block;
+   text-align: center;
+   color: #313332;
+   text-decoration: none !important;
+}
