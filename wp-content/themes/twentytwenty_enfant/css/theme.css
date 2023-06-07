@@ -2,6 +2,10 @@
 /* Import de la font syne depuis Google Fonts et on l'applique sur tous les éléments de la page */
 body * {
    font-family: 'Syne', sans-serif;
+  
+}
+h1 {
+   color: #3B8E46;
 }
 /* On applique un gris plus clair sur les paragraphes */
 p {
@@ -76,4 +80,18 @@ li.menu-item.current-menu-item a.rencontrer {
 
 .footer-mentions a:hover {
    font-weight: bold;
+}
+
+.canette-footer {
+   width: 1400px;
+}
+
+.quatre-images {
+   background-color: green;
+   width: 1000px;
+}
+
+.trois-p {
+   padding: 300px;
+   margin: 300px;
 }
