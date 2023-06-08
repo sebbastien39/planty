@@ -4,8 +4,6 @@ body {
    font-family: 'Syne', sans-serif;
    margin: 0 auto;
    padding: 0;
-
-
    text-decoration:none;
    box-sizing: border-box;
 }
@@ -18,9 +16,7 @@ body {
 }
 
 body h1 {
-
-   font-size: large;
-   
+   font-size: large;  
 }
 
 header {
@@ -62,8 +58,6 @@ li.menu-item.current-menu-item a.rencontrer {
    font-weight: bold;   
  }
 
-
-
 /* Bouton Commander */
 
 .commande a {
@@ -81,7 +75,6 @@ li.menu-item.current-menu-item a.rencontrer {
 .commande a:visited {
    color: white !important;
 }
-
 
 /* Page accueil */
 
@@ -106,21 +99,21 @@ li.menu-item.current-menu-item a.rencontrer {
 
 .canette {
    position: relative;
-   z-index: 0;
+   z-index: 1;
 }
 
 .feuille1 {
    position: relative;
    left: 200px;
    bottom: -100px;
-   z-index: 1;
+   z-index: 0;
 }
 
 .feuille2{
    position: relative;
    right: 200px;
    bottom: -100px;
-   z-index: 1;
+   z-index: 0;
 }
 
 /* Energies plantes */
@@ -143,7 +136,6 @@ li.menu-item.current-menu-item a.rencontrer {
    font-size: 30px;
    width: 800px;
    padding: 50px;
-
 }
 
 /* Quatre images */
@@ -151,14 +143,12 @@ li.menu-item.current-menu-item a.rencontrer {
 .quatre-images {
    background-color: #ECE2DA;
    display: flex;
-
 }
 
 .quatre-images h2 {
    font-size: 80px;
    color: #D2776A;
    padding-top: 50px;
-
 }
 
 .quatre-images p {
@@ -174,11 +164,7 @@ li.menu-item.current-menu-item a.rencontrer {
    padding-top: 20px;
 }
 
-
 /* Bouton commader sous les quatre image accueil */
-.commander-quatre{
-
-}
 
 .commander-quatre-bouton {
    background-color: #E0B9B4;
@@ -204,7 +190,6 @@ li.menu-item.current-menu-item a.rencontrer {
    color: #3B8E46;
    padding-bottom: 60px;
    padding-top: 60px;
-
 }
 
 .trois-p h4 {
@@ -216,19 +201,16 @@ li.menu-item.current-menu-item a.rencontrer {
 .trois-p p {
    font-size: 30px;
    padding: 5px;
-
 }
 
 /* Canette footer */
 
-
 .conteneur-canettes-footer {
-
    background-color: aqua;
 }
 
 .canettes-footer {
-background-color: blueviolet;
+   background-color: blueviolet;
    display: flex;
 }
 
@@ -244,4 +226,146 @@ footer a {
 
 footer a:hover {
    font-weight: bold;
+}
+
+/*==============================================================*/
+
+/* Page nous contacter */
+
+/* Nous rencontrer*/
+
+.entry-content {
+   width: 1440px;
+}
+
+.nous-rencontrer {
+   background-color: #ECE2DA;
+   text-align: center;
+   display: flex;
+}
+
+.nous-rencontrer h2 {
+   font-size: 60px;
+   font-weight: bold;
+   color: #D2776A;
+   padding-top: 180px;
+}
+
+.nous-rencontrer p {
+   font-size: 30px;
+   width: 800px;
+   position: relative;
+   top: -150px;
+}
+
+.fleur-verte {
+   position: relative;
+   top: -200px;
+   left: -450px;
+}
+
+/* L'équipe */
+
+.lequipe {
+   background: url('../images/rectangle1.png');
+   position: relative;
+   top: -60px;
+   height: 60px;
+}
+
+.lequipe-titre {
+   font-size: 30px;
+}
+
+.lequipe-cadre {
+   padding-right: 90px;
+   padding-left: 90px;
+   height: 100px;
+}
+
+.lequipe-cadre h3 {
+   font-size: 30px;
+   padding: 10px;
+}
+
+.lequipe-cadre p {
+   font-size: 20px;
+   padding: 5px;
+}
+
+.lequipe-grande-feuille {
+   position: relative;
+   width: 175px;
+   right: -1250px;
+}
+
+/* Nous contacter */
+
+.nous-contacter {
+   background-color: #ECE2DA;
+   text-align: center;
+   display: flex;
+}
+
+.nous-contacter h2 {
+   font-size: 40px;
+   padding: 50px;
+}
+
+.envoyer-bouton {
+   background-color: #E0B9B4;
+   color: white;
+}
+
+.envoyer-bouton:hover {
+   background-color: #C02E44;
+}
+
+/* Contact-form-7 */
+
+.nous-contacter-form {
+   font-size: 25px;
+   display: block;
+   text-align: left;
+
+}
+
+
+.nous-contacter-form .nom, .email {
+   width: 383px;
+
+}
+
+.nous-contacter-form textarea {
+   width: 383px;
+   height: 237px;
+
+}
+
+
+
+.nom, .email, .message {
+
+   padding-bottom: 10px;
+   display: block;
+   text-align: left;
+}
+
+/* Petite feuille verte */
+
+.feuille-verte {
+   z-index: 1;
+}
+
+.nous-contacter-petite-feuille {
+   position: relative;
+   right: 180px;
+   top: -90px;
+   z-index: 0;
+}
+
+/* Nous rencontrer canette footer */
+
+.nous-rencontrer-canette-footer {
+   background-color: #ECE2DA;
 }
