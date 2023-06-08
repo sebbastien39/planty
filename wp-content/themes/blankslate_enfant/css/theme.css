@@ -4,8 +4,8 @@ body {
    font-family: 'Syne', sans-serif;
    margin: 0 auto;
    padding: 0;
-   text-decoration:none;
-   box-sizing: border-box;
+   /*text-decoration:none;*/
+  /* box-sizing: border-box;*/
 }
 
 #container {
@@ -94,6 +94,7 @@ li.menu-item.current-menu-item a.rencontrer {
 
 .canette-feuilles {
    background-color: #ECE2DA;
+   border-radius: 0px 0px 500px 500px / 0px 0px 80px 80px;
    display: flex;
 }
 
@@ -121,9 +122,9 @@ li.menu-item.current-menu-item a.rencontrer {
 .energies-plantes {
    display: flex;
    text-align: center;
-   background: url('../images/rectangle1.png');
+/*   background: url('../images/rectangle1.png');
    position: relative;
-   top: -60px;
+   top: -60px;*/
 }
 .energies-plantes h2 {
 
@@ -142,6 +143,7 @@ li.menu-item.current-menu-item a.rencontrer {
 
 .quatre-images {
    background-color: #ECE2DA;
+   border-radius: 0px 0px 500px 500px / 0px 0px 80px 80px;
    display: flex;
 }
 
@@ -178,10 +180,10 @@ li.menu-item.current-menu-item a.rencontrer {
 
 .trois-p {
    padding: 50px;
-   background: url('../images/rectangle1.png');
+   /*background: url('../images/rectangle1.png');
    position: relative;
    top: -60px;
-   background-repeat: no-repeat;
+   background-repeat: no-repeat;*/
 }
 
 .trois-p h2 {
@@ -240,6 +242,7 @@ footer a:hover {
 
 .nous-rencontrer {
    background-color: #ECE2DA;
+   border-radius: 0px 0px 500px 500px / 0px 0px 80px 80px;
    text-align: center;
    display: flex;
 }
@@ -267,14 +270,15 @@ footer a:hover {
 /* L'équipe */
 
 .lequipe {
-   background: url('../images/rectangle1.png');
+   /*background: url('../images/rectangle1.png');
    position: relative;
    top: -60px;
-   height: 60px;
+   height: 60px;*/
 }
 
 .lequipe-titre {
    font-size: 30px;
+   padding-top: 50px;
 }
 
 .lequipe-cadre {
