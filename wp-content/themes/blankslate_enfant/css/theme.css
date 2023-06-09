@@ -4,25 +4,15 @@ body {
    font-family: 'Syne', sans-serif;
    margin: 0 auto;
    padding: 0;
-   /*text-decoration:none;*/
-  /* box-sizing: border-box;*/
+   max-width: 1440px;
 }
 
 #container {
-   margin: 0 auto;
-   max-width: 1440px;
    justify-content: center;
    display: flex;
 }
 
-body h1 {
-   font-size: large;  
-}
-
 header {
-   display: flex;
-   margin: 0 auto;
-   max-width: 1440px;
    display: flex;
 }
 
@@ -34,7 +24,6 @@ header {
 }
 
 /* Disposition du menu */
-
 
 /* Apparence du menu */
 
@@ -79,18 +68,6 @@ li.menu-item.current-menu-item a.rencontrer {
 /* Page accueil */
 
 /* Canette */
-.titre-canette1 {
-   font-size: 90px;
-   color: #3B8E46;
-   font-weight: bold;
-   padding-top: 50px;
-}
-
-.titre-canette2 {
-   font-size: 90px;
-   color: #3B8E46;
-   font-weight: bold;
-}
 
 .canette-feuilles {
    background-color: #ECE2DA;
@@ -120,23 +97,7 @@ li.menu-item.current-menu-item a.rencontrer {
 /* Energies plantes */
 
 .energies-plantes {
-   display: flex;
-   text-align: center;
-/*   background: url('../images/rectangle1.png');
-   position: relative;
-   top: -60px;*/
-}
-.energies-plantes h2 {
 
-   font-size: 70px;
-   color: #3B8E46;
-   padding-top: 100px;
-}
-
-.energies-plantes p {
-   font-size: 30px;
-   width: 800px;
-   padding: 50px;
 }
 
 /* Quatre images */
@@ -147,73 +108,21 @@ li.menu-item.current-menu-item a.rencontrer {
    display: flex;
 }
 
-.quatre-images h2 {
-   font-size: 80px;
-   color: #D2776A;
-   padding-top: 50px;
+/* Bouton commander sous les quatre images accueil */
+
+.wp-block-button__link { 
+	transition-property: background-color; /* Active la transition sur background-color */
 }
 
-.quatre-images p {
-   font-size: 20px;
-   padding-bottom: 30px;
-}
-
-.image1, .image2 {
-   padding-bottom: 10px;
-}
-
-.image3, .image4 {
-   padding-top: 20px;
-}
-
-/* Bouton commader sous les quatre image accueil */
-
-.commander-quatre-bouton {
-   background-color: #E0B9B4;
-   color: white;
-}
-.commander-quatre-bouton:hover {
-   background-color: #C02E44;
+.wp-block-button__link:hover { 
+	background:#C02E44 !important; 
 }
 
 /* Trois p */
 
 .trois-p {
-   padding: 50px;
-   /*background: url('../images/rectangle1.png');
-   position: relative;
-   top: -60px;
-   background-repeat: no-repeat;*/
-}
-
-.trois-p h2 {
-   font-size: 60px;
-   font-weight: bold;
-   color: #3B8E46;
-   padding-bottom: 60px;
-   padding-top: 60px;
-}
-
-.trois-p h4 {
-   font-size: 50px;
-   color: #3B8E46;
-   padding: 5px;
-}
-
-.trois-p p {
-   font-size: 30px;
-   padding: 5px;
-}
-
-/* Canette footer */
-
-.conteneur-canettes-footer {
-   background-color: aqua;
-}
-
-.canettes-footer {
-   background-color: blueviolet;
-   display: flex;
+   padding-left: 50px;
+   padding-right: 50px;
 }
 
 /* FOOTER */
@@ -224,6 +133,7 @@ footer a {
    font-size: 20px;
    color: #313332;
    text-decoration: none !important;
+   padding: 20px;
 }
 
 footer a:hover {
@@ -243,65 +153,21 @@ footer a:hover {
 .nous-rencontrer {
    background-color: #ECE2DA;
    border-radius: 0px 0px 500px 500px / 0px 0px 80px 80px;
-   text-align: center;
-   display: flex;
 }
 
-.nous-rencontrer h2 {
-   font-size: 60px;
-   font-weight: bold;
-   color: #D2776A;
-   padding-top: 180px;
-}
-
-.nous-rencontrer p {
-   font-size: 30px;
-   width: 800px;
+.nous-rencontrer-fleur-verte {
    position: relative;
-   top: -150px;
-}
-
-.fleur-verte {
-   position: relative;
-   top: -200px;
-   left: -450px;
+   top: -80px;
+   right: -300px;
 }
 
 /* L'équipe */
 
-.lequipe {
-   /*background: url('../images/rectangle1.png');
-   position: relative;
-   top: -60px;
-   height: 60px;*/
-}
-
-.lequipe-titre {
-   font-size: 30px;
-   padding-top: 50px;
-}
-
 .lequipe-cadre {
-   padding-right: 90px;
-   padding-left: 90px;
-   height: 100px;
+   padding-left: 80px;
+   padding-right: 80px;
 }
 
-.lequipe-cadre h3 {
-   font-size: 30px;
-   padding: 10px;
-}
-
-.lequipe-cadre p {
-   font-size: 20px;
-   padding: 5px;
-}
-
-.lequipe-grande-feuille {
-   position: relative;
-   width: 175px;
-   right: -1250px;
-}
 
 /* Nous contacter */
 
@@ -311,42 +177,22 @@ footer a:hover {
    display: flex;
 }
 
-.nous-contacter h2 {
-   font-size: 40px;
-   padding: 50px;
-}
-
-.envoyer-bouton {
-   background-color: #E0B9B4;
-   color: white;
-}
-
-.envoyer-bouton:hover {
-   background-color: #C02E44;
-}
-
 /* Contact-form-7 */
 
 .nous-contacter-form {
    font-size: 25px;
    display: block;
    text-align: left;
-
 }
-
 
 .nous-contacter-form .nom, .email {
    width: 383px;
-
 }
 
 .nous-contacter-form textarea {
    width: 383px;
    height: 237px;
-
 }
-
-
 
 .nom, .email, .message {
 
@@ -357,19 +203,34 @@ footer a:hover {
 
 /* Petite feuille verte */
 
-.feuille-verte {
-   z-index: 1;
+label.message {
+   z-index: 0;
 }
 
 .nous-contacter-petite-feuille {
    position: relative;
    right: 180px;
    top: -90px;
-   z-index: 0;
+   z-index: -1;
+}
+
+
+/* Bouton envoyer */
+
+.envoyer-bouton {
+ 
 }
 
 /* Nous rencontrer canette footer */
 
 .nous-rencontrer-canette-footer {
    background-color: #ECE2DA;
+}
+
+/*=================================================================*/
+
+/* Page Commander */
+
+.wrap-commander {
+   background-color: #3D9448;
 }
