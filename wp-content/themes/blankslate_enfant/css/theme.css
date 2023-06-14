@@ -150,11 +150,6 @@ li.menu-item.current-menu-item a.rencontrer {
 
 }
 
-.trois-p p {
-   display: flex;
-   flex-direction: row;
-}
-
 /* FOOTER */
 
 footer a {
@@ -273,56 +268,89 @@ footer a:hover {
 
 .wraper-commander {
    background-color: #3D9448;
-   justify-content: center;
-   display: flex;
+   justify-content: center; 
    color: white;
 }
 
+/* 4 images on top */
+
 .top-form {
+display: flex;
+flex-direction: row;
+justify-content: center;
+
 
 }
 
+.top-form img {
+   width: 192px;
+   padding: 10px;
+}
+
+.image-top {
+
+}
+
+.bout {
+
+
+}
+
+
+
+
+.bout-image-top {
+   width: 50px;
+
+}
+
+.ok-image-top {
+
+}
+
+/* Formulaire Gauche et Droite */
 
 .wraper-form {
    display: flex;
    justify-content: center;
-   align-items: center;
 }
 
 /* wrapper left*/
 .left-form { 
-flex: 50%;
-padding: 10px;
-}
-
-.nom-left-form, .prenom-left-form, .email-left-form, .adress-right-form, .code-right-form, .ville-right-form {
-   display: block;
-   width: 383px;
-   height: 71px;
-   border-style: none;
-   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.04);
-   border-radius: 7px;
-   font-size: 25px;
-   text-align: left;
-   color: grey;
+   padding: 10px;
 }
 
 /* wraper right */
 .right-form {
-   flex: 50%;
    padding: 10px;
 }
 
+.left-form h2, .right-form h2 {
+   font-size: 30px   ;
+}
 
-
-
-/* Bouton Commander */
-.bouton-form {
+.nom-left-form, .prenom-left-form, .email-left-form {
    display: block;
+   width: 383px;
+   height: 71px;
+   border-style: none;
+   border-radius: 7px;
+  
+   font-size: 25px;
+
+}
+
+.adress-right-form, .code-right-form, .ville-right-form {
+   display: block;
+   width: 383px;
+   height: 71px;
+   border: none;
+   border-radius: 7px;
+   font-size: 25px;
 }
 
 
-
-
-
-
+.bouton-form {
+   display: flex;
+   justify-content: center;
+}

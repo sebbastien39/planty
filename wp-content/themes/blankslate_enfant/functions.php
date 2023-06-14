@@ -14,3 +14,13 @@
 ( 'custom-logo' ); function themename_custom_logo_setup() { $defaults = array( 'height'      => 100, 'width'       => 400, 'flex-height' => true, 'flex-width'  => true, 'header-text' => array( 'site-title', 'site-description' ), ); add_theme_support( 'custom-logo', $defaults ); } add_action( 'after_setup_theme', 'themename_custom_logo_setup' ); 
 
 
+/**
+* Add a custom link to the end of a specific menu that uses the wp_nav_menu() function
+*/
+add_filter('wp_nav_menu_items', 'add_admin_link', 10, 2);
+function add_admin_link($items, $args){
+    if( $args->theme_location == 'my_menu' ){
+        $items = $items . '<li><a title="Admin" href="'. admin_url() .'">Admin</a></li>';
+    }
+    return $items;
+}
