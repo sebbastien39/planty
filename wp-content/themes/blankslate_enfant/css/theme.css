@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
 /* Import de la font syne depuis Google Fonts et on l'applique sur tous les éléments de la page */
 body {
    font-family: 'Syne', sans-serif !important;
@@ -23,8 +23,6 @@ header {
    display: flex;
    justify-content: space-between;
    align-items: center;
-
-
 }
 
 /* Logo */
@@ -90,7 +88,9 @@ li.menu-item.current-menu-item a.rencontrer {
 
 .canette-feuilles {
    background-color: #ECE2DA;
-   border-radius: 0px 0px 500px 500px / 0px 0px 80px 80px;
+   /*border-radius: 0px 0px 500px 500px / 0px 0px 80px 80px;*/
+   border-bottom-right-radius: 500px 80px;
+   border-bottom-left-radius: 500px 80px;
    box-shadow: 0px 10px #E3D9D0;
    display: flex;
 }
@@ -124,11 +124,14 @@ li.menu-item.current-menu-item a.rencontrer {
 
 .quatre-images {
    background-color: #ECE2DA;
-   border-radius: 0px 0px 500px 500px / 0px 0px 80px 80px;
-   box-shadow: 0px 10px #E3D9D0;
-   display: flex;
+   border-bottom-right-radius: 500px 20px;
+   border-bottom-left-radius: 500px 20px;
 }
 
+.deux-images {
+   padding-left: 80px;
+   padding-right: 80px;
+}
 /* Bouton commander sous les quatre images accueil */
 
 .wp-block-button__link { 
@@ -144,12 +147,12 @@ li.menu-item.current-menu-item a.rencontrer {
 .trois-p {
    padding-left: 50px;
    padding-right: 50px;
-   display: flex;
-   align-content: flex-start;
+
 }
 
-.avis1, .avis2, .avis3 .avis{
+.trois-p p {
    display: flex;
+   flex-direction: row;
 }
 
 /* FOOTER */
@@ -184,7 +187,7 @@ footer a:hover {
 .nous-rencontrer-fleur-verte {
    position: relative;
    top: -80px;
-   right: -300px;
+   right: -200px;
 }
 
    /* L'équipe */
@@ -195,6 +198,9 @@ footer a:hover {
 }
 
 .lequipe-branche-verte {
+   position: relative;
+   top: 35px;
+   width: 191px;
 
 
 }
@@ -212,27 +218,22 @@ footer a:hover {
    font-size: 25px;
    display: block;
    text-align: left;
-
 }
 
 .nous-contacter-form h3 {
    padding-top: 22px;
    padding-bottom: 13px;
-
 }
 
 .nous-contacter-form .nom, .email {
    width: 383px;
    height: 73px;
-
-
 }
 
 
 .nous-contacter-form textarea {
    width: 383px;
    height: 237px;
-
 }
 
 .nous-contacter-form .nom, .email, textarea {
@@ -248,28 +249,18 @@ footer a:hover {
 
 /* Petite feuille verte */
 
-.message {
-   z-index: 1;
-}
-
-label.message {
-
-}
-
 .nous-contacter-petite-feuille {
    position: relative;
    top: -150px;
    right: 220px;
    z-index: 0;
-
-
 }
 
 
 /* Bouton envoyer */
 
 .envoyer-bouton {
- 
+ border: none;
 }
 
 /* Nous rencontrer canette footer */
@@ -278,9 +269,60 @@ label.message {
    background-color: #ECE2DA;
 }
 
-/*=============================  3.Page Commander ====================================*/
+/*=============================  3. Page Commander ====================================*/
 
-.wrap-commander {
+.wraper-commander {
    background-color: #3D9448;
+   justify-content: center;
+   display: flex;
+   color: white;
 }
+
+.top-form {
+
+}
+
+
+.wraper-form {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* wrapper left*/
+.left-form { 
+flex: 50%;
+padding: 10px;
+}
+
+.nom-left-form, .prenom-left-form, .email-left-form, .adress-right-form, .code-right-form, .ville-right-form {
+   display: block;
+   width: 383px;
+   height: 71px;
+   border-style: none;
+   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.04);
+   border-radius: 7px;
+   font-size: 25px;
+   text-align: left;
+   color: grey;
+}
+
+/* wraper right */
+.right-form {
+   flex: 50%;
+   padding: 10px;
+}
+
+
+
+
+/* Bouton Commander */
+.bouton-form {
+   display: block;
+}
+
+
+
+
+
 
