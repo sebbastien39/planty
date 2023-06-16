@@ -24,3 +24,6 @@ function add_admin_link($items, $args){
     }
     return $items;
 }
+
+/* Enlève les paragraphes que CF7 génères */
+add_filter('wpcf7_autop_or_not', '__return_false');

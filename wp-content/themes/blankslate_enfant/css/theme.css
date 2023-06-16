@@ -7,7 +7,6 @@ body {
    max-width: 1440px;
 }
 
-
 #container {
    justify-content: center;
    display: flex;
@@ -79,7 +78,7 @@ li.menu-item.current-menu-item a.rencontrer {
 }
 
 .commande a:visited {
-   color: white !important;
+   color: white;
 }
 
 /*======================== 1. Page accueil   ==========================*/
@@ -238,8 +237,12 @@ footer a:hover {
    color: grey;
 }
 
-/* Bouton envoyer formulaire 1 */
-/*.envoyer-bouton {
+textarea {
+   position: relative;
+   z-index: 1;
+}
+/* Bouton envoyer formulaire 1 CF7 */
+#envoyer-bouton {
    display: block;
    margin: 0 auto;
    width: 198px;
@@ -247,18 +250,22 @@ footer a:hover {
    font-size: 24px;
    background-color: #E0B9B4;
    color: white;
+   border-radius: 5px;
 }
 
 .envoyer-bouton:hover {
+   display: block;
+   margin: 0 auto;
    background-color: #C02E44;
 }
-*/
+
 
 /* Petite feuille verte */
 .nous-contacter-petite-feuille {
+
    position: relative;
-   top: -150px;
-   right: 220px;
+   top: -215px;
+   right: 190px;
    z-index: 0;
 }
 
@@ -266,6 +273,7 @@ footer a:hover {
 /* Bouton envoyer */
 .envoyer-bouton {
  border: none;
+ padding-top: 50px;
 }
 
 /* Nous rencontrer canette footer */
@@ -281,69 +289,143 @@ footer a:hover {
    color: white;
 }
 
+.trait1 {
+   border: 1px solid #FFFFFF;
+   width: 860px;
+}
+
+.titre-votre-commande {
+   width: 840px;
+}
+
+
+/*
 .quatre-images-commander {
    display: flex;
    flex-direction: row;
    justify-content: center;
 }
-
+*/
 /* 4 images on top */
 
 .top-form {
-display: flex;
-flex-direction: row;
-justify-content: center;
+   display: flex;
+   flex-direction: row ;
+   justify-content: center;
+   width: 100%;
+   max-width: 900px;
+   margin: 10px auto;
+   padding-bottom: 40px;
 }
 
 .top-form img {
-   width: 192px;
+
    padding: 10px;
 }
 
 
-.image-top {
-
+.img-top {
+   display: flex;
+   flex-direction: column  ;
+   width: 25%;
 }
 
+
+
 .bouts {
+  /*
    display: flex;
    justify-content: center ;
    margin: 0 auto;
-
+*/
 }
 
 .bout {
 
+   display: flex;
+   gap: 10px;
 
+/*
+display: flex;
+flex-direction: row;
 align-items: center;
 padding-left: 5px;
-
+*/
 }
-
 
 .bout-image-top {
-   width: 80px;
-   height: 56px;
    background-color: #E0B9B4;
-   color: white;
+   height: 100%;
+   width: 30px;
 }
 
-.ok-image-top {
-   width: 100px;
-   height: 56px;
-   background-color: #E0B9B4;
+/* Bouton + - OK */
+.part {
+   display:flex;
+   justify-content: space-around;
+ }
+ 
+ input[type="number"] {
+   width:60px;
+   padding:12px;
+   border:none;
+   border-radius:5px;
+   background: white;
+ 
+ }
+ 
+ .form {
+   width:60px;
+   position:relative;
+ }
+ 
+ 
+ .butt {
+   display:flex;
+   flex-direction:column;
+   width:30px;
+   align-items:center;
+   position:absolute;
+   top:0;
+   right:0;
+   height:100%;
+ }
+ 
+ .un, .deux {
+   background: #E0B9B4;
+   width:30px;
+   text-align:center;
+   display:block;
+   height:50%;
+   cursor:pointer;
+ }
+ 
+ .un {
+   border-radius: 0 5px 0 0;
+   border-bottom:1px solid white;
    color: white;
-
+ }
+ 
+ .deux {
+   border: white;
 }
 
+.ok {
+   background-color: #E0B9B4;
+   flex: 1;
+   margin-left: 5px;
+   height:100%;
+   padding:12px;
+   border:none;
+   border-radius:5px;
+   color: white;
+ }
 
-.trait1 {
-   border: 1px solid white;
+.trait2 {
+   border: 1px solid #FFFFFF;
    width: 860px;
-}
-
-.titre-votre-commande {
-   width: 800px;
+   top:0;
+   right:0;
 }
 
 
@@ -352,38 +434,43 @@ padding-left: 5px;
 .wraper-form {
    display: flex;
    justify-content: center;
+   padding-bottom: 20px;
+   padding-top: 20px;
 }
 
 /* wrapper left*/
 .left-form {
-   padding: 20px;
+
 } 
 
+.vertical-line{
+   border-left: 1px solid white;
+   display: inline-block;
+   height: 330px;
+   margin: 0 20px;
+ }
 
-label { 
-   font-size: 20px;
-
-}
 
 /* wraper right */
 .right-form {
-   padding: 20px;
+
 }
 
 .left-form h2, .right-form h2 {
    font-size: 30px;
-   padding-top: 20px;
    padding-bottom: 25px;
+}
+
+label {
+   font-size: 20px;
 }
 
 .nom-left-form, .prenom-left-form, .email-left-form {
    display: block;
    width: 383px;
    height: 71px;
-   border-style: none;
-   border-radius: 7px; 
    font-size: 25px;
-   
+
 }
 
 .adress-right-form, .code-right-form, .ville-right-form {
@@ -393,13 +480,14 @@ label {
    border: none;
    border-radius: 7px;
    font-size: 25px;
-   padding-bottom: 20px;
+
 }
 
 
 .bouton-form {
    display: flex;
    justify-content: center;
+   margin: 0 auto;
 
 }
 
@@ -411,4 +499,85 @@ label {
    font-size: 24px;
    background-color: #E0B9B4;
    color: white;
+   border: none;
 }
+
+.bouton-form-bout:hover {
+   background-color: #C02E44;
+}
+
+/* =================================   Media Queries  ====================*/
+
+@media screen and (max-width:960px){
+   .lequipe-branche-verte {
+      display: none;
+     
+   }
+   .wraper-form{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+   .quatre-images-commander {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+}
+
+@media screen and (max-width:800px){
+   .top-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+}
+
+/*
+input[type="number"] {
+  width:35px;
+  padding:12px;
+  border:none;
+  border-radius:5px
+}
+
+.form {
+  width:60px;
+  position:relative;
+}
+
+
+.butt {
+  display:flex;
+  flex-direction:column;
+  width:30px;
+  align-items:center;
+  position:absolute;
+  top:0;
+  right:0;
+  height:100%
+}
+
+.un, .deux {
+  background:red;
+  width:30px;
+  text-align:center;
+  display:block;
+  height:50%;
+  cursor:pointer
+}
+
+.un {
+  border-radius: 0 5px 0 0;
+  border-bottom:1px solid white;
+}
+
+.deux {
+  border-radius: 0 0 5px 0;
+}
+
+
+ */
+
+
+ 
