@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
 /* Import de la font syne depuis Google Fonts et on l'applique sur tous les éléments de la page */
 body {
-   font-family: 'Syne', sans-serif !important;
+   font-family: 'Syne', sans-serif;
    margin: 0 auto;
    padding: 0;
    max-width: 1440px;
@@ -31,7 +31,9 @@ header {
 }
 
 /* Disposition du menu */
-
+.menu {
+   display: flex;
+}
 /* Apparence du menu */
 
 .menu-item {
@@ -49,8 +51,8 @@ li.menu-item.current-menu-item a.rencontrer {
 /* Bouton Nous rencontrer */
 
 .rencontrer a    {
-   color: black !important;
-   text-decoration: none !important;/*enlever la ligne sous le lien*/ 
+   color: black;
+   text-decoration: none;/*enlever la ligne sous le lien*/ 
    padding: 32px;
    width: 236px;
    text-align: center;
@@ -61,11 +63,27 @@ li.menu-item.current-menu-item a.rencontrer {
    font-weight: bold;   
  }
 
+.rencontrer {
+   order: 1;
+}
+
+/* Admin*/
+
+.admin {
+   order: 2; /* disposer Admin en second dans le Menu */
+   color: black;
+   text-decoration: none !important;/*enlever la ligne sous le lien*/ 
+   padding: 32px;
+   width: 236px;
+   text-align: center;
+}
+
+
 /* Bouton Commander */
 
 .commande a {
-   color: white !important;
-   text-decoration: none !important;/*enlever la ligne sous le lien*/
+   color: white;
+   text-decoration: none;/*enlever la ligne sous le lien*/
    background-color: #E0B9B4;
    padding: 32px;
    width: 236px;
@@ -74,11 +92,15 @@ li.menu-item.current-menu-item a.rencontrer {
 
 .commande a:hover {
    background-color: #C02E44;
-   color: white !important;
+   color: white;
 }
 
 .commande a:visited {
    color: white;
+}
+
+.commande {
+   order: 3;
 }
 
 /*======================== 1. Page accueil   ==========================*/
@@ -203,6 +225,7 @@ footer a:hover {
    background-color: #ECE2DA;
    text-align: center;
    display: flex;
+
 }
 
 /* Contact-form-7 */
@@ -261,24 +284,25 @@ textarea {
    color: white;
    border-radius: 5px;
    border: none;
-   position: relative;
-   top: 80px;
+   margin-top: 30px;
+
+
 }
 
 .envoyer-bouton-f1:hover {
-   display: block;
-   margin: 0 auto;
    background-color: #C02E44;
 }
 
-
+.test-feuille {
+   position: relative;
+}
 /* Petite feuille verte */
 .nous-contacter-petite-feuille {
 
-   position: relative;
-   top: -215px;
-   right: 190px;
-   z-index: 0;
+   position: absolute;
+   bottom: 0px;
+   left: -115px;
+
 }
 
 
@@ -299,6 +323,7 @@ textarea {
    background-color: #3D9448;
    justify-content: center; 
    color: white;
+   padding-bottom: 93px;
 }
 
 .trait1 {
@@ -443,9 +468,17 @@ textarea {
    padding-top: 20px;
 }
 
-/* wrapper left*/
-.left-form {
+.wraper-form span {
+   margin-bottom: 20px;
+}
 
+.wraper-form input {
+   border-radius: 7px;
+}
+
+/* wrapper left right*/
+.left-form, .right-form {
+   line-height: 71px;
 } 
 
 .vertical-line{
@@ -456,10 +489,6 @@ textarea {
  }
 
 
-/* wraper right */
-.right-form {
-
-}
 
 .left-form h2, .right-form h2 {
    font-size: 30px;
@@ -498,7 +527,7 @@ label .nom-left-form, label .prenom-left-form, label .email-left-form, label .ad
 }
 
 /* Bouton Commander */
-.bouton-form-bout {
+input[type="submit"].bouton-form-bout {
    display: flex;
    margin: 0 auto;
    width: 198px;
@@ -507,9 +536,10 @@ label .nom-left-form, label .prenom-left-form, label .email-left-form, label .ad
    background-color: #E0B9B4;
    color: white;
    border: none;
+   border-radius: 7px;
 }
 
-.bouton-form-bout:hover {
+input[type="submit"].bouton-form-bout:hover {
    background-color: #C02E44;
 }
 
