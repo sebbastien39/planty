@@ -15,7 +15,6 @@ body {
 
 nav {
    height: 80px;
-
 }
 
 header {
@@ -50,11 +49,10 @@ li.menu-item.current-menu-item a.rencontrer {
 }
 /* Bouton Nous rencontrer */
 
-.rencontrer a    {
+.rencontrer a {
    color: black;
    text-decoration: none;/*enlever la ligne sous le lien*/ 
    padding: 32px;
-   width: 236px;
    text-align: center;
  }
  
@@ -71,13 +69,20 @@ li.menu-item.current-menu-item a.rencontrer {
 
 .admin {
    order: 2; /* disposer Admin en second dans le Menu */
+}
+
+.admin a {
    color: black;
-   text-decoration: none !important;/*enlever la ligne sous le lien*/ 
    padding: 32px;
    width: 236px;
    text-align: center;
+   text-decoration: none;/*enlever la ligne sous le lien*/ 
 }
 
+.admin a:hover {
+   color: black;
+   font-weight: bold;   
+ }
 
 /* Bouton Commander */
 
@@ -109,7 +114,6 @@ li.menu-item.current-menu-item a.rencontrer {
 
 .canette-feuilles {
    background-color: #ECE2DA;
-   /*border-radius: 0px 0px 500px 500px / 0px 0px 80px 80px;*/
    border-bottom-right-radius: 500px 80px;
    border-bottom-left-radius: 500px 80px;
    box-shadow: 0px 10px #E3D9D0;
@@ -135,13 +139,14 @@ li.menu-item.current-menu-item a.rencontrer {
    z-index: 0;
 }
 
-   /* Energies plantes */
+/* Energies plantes */
 
 .energies-plantes-p{
 
+
 }
 
-   /* Quatre images */
+/* Quatre images */
 
 .quatre-images {
    background-color: #ECE2DA;
@@ -154,8 +159,8 @@ li.menu-item.current-menu-item a.rencontrer {
    padding-right: 80px;
 justify-content: center;
 }
-/* Bouton commander sous les quatre images accueil */
 
+/* Bouton commander sous les quatre images accueil */
 .wp-block-button__link { 
 	transition-property: background-color; /* Active la transition sur background-color */
 }
@@ -173,7 +178,6 @@ justify-content: center;
 }
 
 /* FOOTER */
-
 footer a {
    display: block;
    text-align: center;
@@ -190,7 +194,7 @@ footer a:hover {
 
 /*=========================== 2. Page nous rencontrer ===================================*/
 
-   /* Nous rencontrer */
+/* Nous rencontrer */
 
 .entry-content {
    width: 1440px;
@@ -207,7 +211,7 @@ footer a:hover {
    right: -200px;
 }
 
-   /* L'équipe */
+/* L'équipe */
 
 .lequipe-cadre {
 
@@ -219,13 +223,12 @@ footer a:hover {
    top: 35px;
    width: 191px;
 }
-   /* Nous contacter */
+/* Nous contacter */
 
 .nous-contacter {
    background-color: #ECE2DA;
    text-align: center;
    display: flex;
-
 }
 
 /* Contact-form-7 */
@@ -237,10 +240,11 @@ footer a:hover {
 }
 
 
-.wpcf7-form-control-wrap, .wpcf7-not-valid-tip {
+.wpcf7-form-control-wrap, .wpcf7-not-valid-tip, .wpcf7-not-valid-tip span {
    display: flex;
    flex-direction: column;
    align-items: center;
+   font-size: 20px;
 }
 
 .nous-contacter-form h3 {
@@ -273,6 +277,7 @@ textarea {
    z-index: 1;
 
 }
+
 /* Bouton envoyer formulaire 1 CF7 */
 .envoyer-bouton-f1 {
    display: block;
@@ -285,8 +290,6 @@ textarea {
    border-radius: 5px;
    border: none;
    margin-top: 30px;
-
-
 }
 
 .envoyer-bouton-f1:hover {
@@ -296,15 +299,20 @@ textarea {
 .test-feuille {
    position: relative;
 }
+
 /* Petite feuille verte */
 .nous-contacter-petite-feuille {
-
    position: absolute;
-   bottom: 0px;
-   left: -115px;
-
+   bottom: 50px;
+   left: -85px;
 }
 
+/* Centrer les label non validés */
+:invalid {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
 
 /* Bouton envoyer */
 .envoyer-bouton {
@@ -349,21 +357,14 @@ textarea {
    padding: 10px;
 }
 
-
 .img-top {
    display: flex;
    flex-direction: column  ;
    width: 25%;
 }
 
-
-
 .bouts {
-  /*
-   display: flex;
-   justify-content: center ;
-   margin: 0 auto;
-*/
+
 }
 
 .bout {
@@ -389,14 +390,12 @@ textarea {
    border:none;
    border-radius:5px;
    background: white;
- 
  }
  
  .form {
    width:60px;
    position:relative;
  }
- 
  
  .butt {
    display:flex;
@@ -421,7 +420,6 @@ textarea {
 .un:hover, .deux:hover {
    background-color: #C02E44;
 }
-
 
  /* + */
  .un {
@@ -481,14 +479,23 @@ textarea {
    line-height: 71px;
 } 
 
+.left-form {
+   padding-right: 22px;
+}
+
+.right-form {
+   padding-left: 22px;
+}
+
 .vertical-line{
    border-left: 1px solid white;
    display: inline-block;
-   height: 330px;
+   position: relative;
+   top: 28px;
+   
+   height: 540px;
    margin: 0 20px;
  }
-
-
 
 .left-form h2, .right-form h2 {
    font-size: 30px;
@@ -520,7 +527,6 @@ label .nom-left-form, label .prenom-left-form, label .email-left-form, label .ad
    border-radius: 7px;
 }
 
-
 .bouton-form {
 
 
@@ -551,26 +557,43 @@ input[type="submit"].bouton-form-bout:hover {
    #container {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+   }
+   .menu-menu-principal-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; 
+   }
+    h1 {
+      font-size: 50px !important;
+   }
+   h2 {
+      font-size: 30px !important;
+   }
+   #container {
+      display: flex;
+      flex-direction: column;
       align-items: center;
    }
+/* Page 3 Commander */
    .wraper-form{
       display: flex;
       flex-direction: column;
       align-items: center;
    }
+/*
    .quatre-images-commander {
       display: flex;
       flex-direction: column;
       align-items: center;
    }
+*/
 
 /* Page 2 Nous rencontrer */
    .nous-rencontrer-fleur-verte {
       display: none;
    }
-
-
-   /* page 3 Commander */
+/* page 3 Commander */
    .vertical-line {
       display: none;
    }
@@ -580,11 +603,25 @@ input[type="submit"].bouton-form-bout:hover {
    .left-form h2, .right-form h2 {
       text-align: center;
    }
+   .left-form {
+      padding-right: 0px;
+   }  
+   .right-form {
+      padding-left: 0px;
+   }
 }
 
 /* -------------Max screen 800px-------- */
 
 @media screen and (max-width:800px){
+   h1 {
+      font-size: 30px !important;
+   }
+
+   h2 {
+      font-size: 20px !important;     
+   }
+ /* Page 1 Accueil */
    .canette{
       display: flex;
       flex-direction: column;
@@ -595,12 +632,11 @@ input[type="submit"].bouton-form-bout:hover {
    }
 
 /* Page 2 Nous rencontrer */
-
    .lequipe-branche-verte {
       display: none;     
    }
-/* Page 3 Commander */
 
+/* Page 3 Commander */
    .top-form {
       display: flex;
       flex-direction: column;
@@ -608,6 +644,38 @@ input[type="submit"].bouton-form-bout:hover {
    }
 }
 
+/* -------------Max screen 420px-------- */
 
+@media screen and (max-width:420px){
+   h1 {
+      font-size: 20px !important;
+   }
+   .h2-resp {
+      font-size: 16px !important;
+   }
+ /* Page 1 Accueil */
+   .canette{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+   .feuille1, .feuille2 {
+      display: none;
+   }
+   .energies-plantes-p{
+
+   }
+/* Page 2 Nous rencontrer */
+   .lequipe-branche-verte {
+      display: none;     
+   }
+
+/* Page 3 Commander */
+   .top-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+}
 
  
