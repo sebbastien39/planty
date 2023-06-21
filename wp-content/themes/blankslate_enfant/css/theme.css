@@ -7,12 +7,6 @@ body {
    max-width: 1440px;
 }
 
-#container {
-   display: flex;
-   justify-content: center;
-}
-
-
 nav {
    height: 80px;
 }
@@ -184,8 +178,9 @@ footer a {
    font-size: 20px;
    color: #313332;
    text-decoration: none !important;
-   padding: 20px;
-   height: 60px;
+padding-top: 20px;
+padding-bottom: 20px;
+
 }
 
 footer a:hover {
@@ -196,10 +191,15 @@ footer a:hover {
 
 /* Nous rencontrer */
 
+
+/*
+
 .entry-content {
    width: 1440px;
+   
 }
 
+*/
 .nous-rencontrer {
    background-color: #ECE2DA;
    border-radius: 0px 0px 500px 500px / 0px 0px 80px 80px;
@@ -326,12 +326,8 @@ textarea {
 }
 
 /*=============================  3. Page Commander ====================================*/
+.wrap-vert {
 
-.wraper-commander {
-   background-color: #3D9448;
-   justify-content: center; 
-   color: white;
-   padding-bottom: 93px;
 }
 
 .trait1 {
@@ -347,7 +343,7 @@ textarea {
    display: flex;
    flex-direction: row ;
    justify-content: center;
-   width: 100%;
+
    max-width: 900px;
    margin: 10px auto;
    padding-bottom: 40px;
@@ -431,7 +427,7 @@ textarea {
  /* - */
  .deux {
    border-radius: 0 0 5px 0;
-   border: white;
+   color: white;
 }
 
 /* OK */
@@ -464,6 +460,7 @@ textarea {
    justify-content: center;
    padding-bottom: 20px;
    padding-top: 20px;
+   color: white;
 }
 
 .wraper-form span {
@@ -491,8 +488,7 @@ textarea {
    border-left: 1px solid white;
    display: inline-block;
    position: relative;
-   top: 28px;
-   
+   top: 28px;  
    height: 540px;
    margin: 0 20px;
  }
@@ -551,131 +547,97 @@ input[type="submit"].bouton-form-bout:hover {
 
 /* =================================   Media Queries  ====================*/
 
+/* -------------Max screen 1200px-------- */
+
+@media screen and (max-width:1200px){
+/* Page 2 Nous rencontrer */
+   .nous-rencontrer-fleur-verte {
+   display: none;
+   }
+
+   }
+
 /* -------------Max screen 960px-------- */
 
 @media screen and (max-width:960px){
-   #container {
-      display: flex;
+   .top-form {
+      flex-wrap: wrap;
+   }
+}
+/* -------------Max screen 900px-------- */
+
+@media screen and (max-width:900px){
+/* Menu de Navigation */
+   ul {
       flex-direction: column;
-      justify-content: center;
+   align-items: center;
    }
-   .menu-menu-principal-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center; 
-   }
-    h1 {
-      font-size: 50px !important;
-   }
-   h2 {
-      font-size: 30px !important;
-   }
-   #container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+   .rencontrer a {
+      height: 10%;
    }
 /* Page 3 Commander */
-   .wraper-form{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-   }
-/*
-   .quatre-images-commander {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-   }
-*/
+.wraper-form {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding-bottom: 20px;
+   padding-top: 20px;
+   color: white;
+}
 
-/* Page 2 Nous rencontrer */
-   .nous-rencontrer-fleur-verte {
-      display: none;
-   }
-/* page 3 Commander */
-   .vertical-line {
-      display: none;
+.top-form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
    }
    .titre-votre-commande {
       width: 100%;
+   }
+   .vertical-line {
+   display: none;
    }
    .left-form h2, .right-form h2 {
       text-align: center;
    }
    .left-form {
-      padding-right: 0px;
-   }  
+    padding-right: 0px;
+   } 
    .right-form {
-      padding-left: 0px;
+   padding-left: 0px;
    }
+   .wraper-form{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      }
+
 }
 
-/* -------------Max screen 800px-------- */
 
-@media screen and (max-width:800px){
-   h1 {
-      font-size: 30px !important;
-   }
 
-   h2 {
-      font-size: 20px !important;     
-   }
- /* Page 1 Accueil */
+
+
+
+
+
+/* -------------Max screen 781px-------- */
+
+@media screen and (max-width:781px){
+
+/* Page 1 Accueil */
    .canette{
       display: flex;
       flex-direction: column;
       align-items: center;
-   }
+      }
    .feuille1, .feuille2 {
       display: none;
-   }
+      }
 
 /* Page 2 Nous rencontrer */
    .lequipe-branche-verte {
-      display: none;     
+      display: none; 
+      }
    }
 
-/* Page 3 Commander */
-   .top-form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-   }
-}
 
-/* -------------Max screen 420px-------- */
-
-@media screen and (max-width:420px){
-   h1 {
-      font-size: 20px !important;
-   }
-   .h2-resp {
-      font-size: 16px !important;
-   }
- /* Page 1 Accueil */
-   .canette{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-   }
-   .feuille1, .feuille2 {
-      display: none;
-   }
-   .energies-plantes-p{
-
-   }
-/* Page 2 Nous rencontrer */
-   .lequipe-branche-verte {
-      display: none;     
-   }
-
-/* Page 3 Commander */
-   .top-form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-   }
-}
-
- 
