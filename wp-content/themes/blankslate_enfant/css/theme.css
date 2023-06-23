@@ -545,6 +545,80 @@ input[type="submit"].bouton-form-bout:hover {
    background-color: #C02E44;
 }
 
+
+
+
+
+
+/* --------------------------- Burger Menu --------------------- */
+
+/* --------Min screen 900px --------- */
+
+@media screen and (min-width:900px){
+
+   #toggle {
+      display: none;
+   }
+
+.menu {
+   position: relative;
+}
+
+}
+
+/* -------------- Max width --------- */
+
+@media screen and (max-width:900px){
+   .menu {
+      display: none;
+   }
+   #toggle {
+      display: none;
+   }
+}
+
+
+
+   nav .burger-lab { 
+   display: flex;
+   position: absolute;
+   display:block;
+   top: 20px;
+   right: 20px;
+   z-index: 10;
+   color: #E0B9B4;
+   font-size: 48px;
+}
+
+
+
+#toggle:checked + div > .menu {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   position: absolute;
+   top: 80px;
+   right: 0;
+   background-color: #fff;
+   /* z-index: 1; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* =================================   Media Queries  ====================*/
 
 /* -------------Max screen 1200px-------- */
@@ -641,3 +715,7 @@ input[type="submit"].bouton-form-bout:hover {
    }
 
 
+
+
+
+   
