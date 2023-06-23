@@ -104,7 +104,7 @@ li.menu-item.current-menu-item a.rencontrer {
 
 /*======================== 1. Page accueil   ==========================*/
 
-   /* Canette */
+/* Canette */
 
 .canette-feuilles {
    background-color: #ECE2DA;
@@ -133,13 +133,6 @@ li.menu-item.current-menu-item a.rencontrer {
    z-index: 0;
 }
 
-/* Energies plantes */
-
-.energies-plantes-p{
-
-
-}
-
 /* Quatre images */
 
 .quatre-images {
@@ -151,7 +144,7 @@ li.menu-item.current-menu-item a.rencontrer {
 .deux-images {
    padding-left: 80px;
    padding-right: 80px;
-justify-content: center;
+   justify-content: center;
 }
 
 /* Bouton commander sous les quatre images accueil */
@@ -168,7 +161,6 @@ justify-content: center;
 .trois-p {
    padding-left: 50px;
    padding-right: 50px;
-
 }
 
 /* FOOTER */
@@ -178,9 +170,8 @@ footer a {
    font-size: 20px;
    color: #313332;
    text-decoration: none !important;
-padding-top: 20px;
-padding-bottom: 20px;
-
+   padding-top: 20px;
+   padding-bottom: 20px;
 }
 
 footer a:hover {
@@ -191,15 +182,6 @@ footer a:hover {
 
 /* Nous rencontrer */
 
-
-/*
-
-.entry-content {
-   width: 1440px;
-   
-}
-
-*/
 .nous-rencontrer {
    background-color: #ECE2DA;
    border-radius: 0px 0px 500px 500px / 0px 0px 80px 80px;
@@ -212,11 +194,6 @@ footer a:hover {
 }
 
 /* L'équipe */
-
-.lequipe-cadre {
-
-
-}
 
 .lequipe-branche-verte {
    position: relative;
@@ -275,7 +252,6 @@ footer a:hover {
 textarea {
    position: relative;
    z-index: 1;
-
 }
 
 /* Bouton envoyer formulaire 1 CF7 */
@@ -326,9 +302,6 @@ textarea {
 }
 
 /*=============================  3. Page Commander ====================================*/
-.wrap-vert {
-
-}
 
 .trait1 {
    border: 1px solid #FFFFFF;
@@ -343,7 +316,6 @@ textarea {
    display: flex;
    flex-direction: row ;
    justify-content: center;
-
    max-width: 900px;
    margin: 10px auto;
    padding-bottom: 40px;
@@ -357,10 +329,6 @@ textarea {
    display: flex;
    flex-direction: column  ;
    width: 25%;
-}
-
-.bouts {
-
 }
 
 .bout {
@@ -484,7 +452,7 @@ textarea {
    padding-left: 22px;
 }
 
-.vertical-line{
+.vertical-line {
    border-left: 1px solid white;
    display: inline-block;
    position: relative;
@@ -523,11 +491,6 @@ label .nom-left-form, label .prenom-left-form, label .email-left-form, label .ad
    border-radius: 7px;
 }
 
-.bouton-form {
-
-
-}
-
 /* Bouton Commander */
 input[type="submit"].bouton-form-bout {
    display: flex;
@@ -545,11 +508,6 @@ input[type="submit"].bouton-form-bout:hover {
    background-color: #C02E44;
 }
 
-
-
-
-
-
 /* --------------------------- Burger Menu --------------------- */
 
 nav .burger-lab { 
@@ -563,7 +521,7 @@ nav .burger-lab {
    font-size: 48px;
 }
 
-   #toggle:checked + div > .menu {
+#toggle:checked + div > .menu {
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -571,26 +529,23 @@ nav .burger-lab {
    top: 80px;
    right: 0;
    background-color: #fff;
-   /* z-index: 1; */
 }
-
-
-/* --------Min screen 900px --------- */
+/* ========================================= Media Queries Burger Menu === */
+/* --------Min screen 900px Burger Menu --------- */
 
 @media screen and (min-width:900px){
    #toggle {
-      display: none;
-   }
-
-.menu {
-   position: relative;
-}
-nav .burger-lab {
    display: none;
-}
+   }
+   .menu {
+   position: relative;
+   }
+   nav .burger-lab {
+   display: none;
+   }
 }
 
-/* -------------- Max width --------- */
+/* -------------- Max width Burger Menu --------- */
 
 @media screen and (max-width:900px){
    .menu {
@@ -610,7 +565,6 @@ nav .burger-lab {
    .nous-rencontrer-fleur-verte {
    display: none;
    }
-
 }
 
 /* -------------Max screen 960px-------- */
@@ -625,7 +579,6 @@ nav .burger-lab {
 @media screen and (max-width:900px){
 /* Page 3 Commander */
    .wraper-form {
-      display: flex;
       flex-direction: column;
       justify-content: center;
       padding-bottom: 20px;
@@ -634,7 +587,6 @@ nav .burger-lab {
       }
 
    .top-form {
-      display: flex;
       flex-direction: column;
       align-items: center;
       }
@@ -653,8 +605,7 @@ nav .burger-lab {
       .right-form {
       padding-left: 0px;
       }
-   .wraper-form{
-      display: flex;
+      .wraper-form {
       flex-direction: column;
       align-items: center;
      }
@@ -663,7 +614,6 @@ nav .burger-lab {
 /* -------------Max screen 781px-------- */
 
 @media screen and (max-width:781px){
-
 /* Page 1 Accueil */
    .canette{
       display: flex;
@@ -673,7 +623,6 @@ nav .burger-lab {
    .feuille1, .feuille2 {
       display: none;
    }
-
 /* Page 2 Nous rencontrer */
    .lequipe-branche-verte {
       display: none; 
