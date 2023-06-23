@@ -552,10 +552,32 @@ input[type="submit"].bouton-form-bout:hover {
 
 /* --------------------------- Burger Menu --------------------- */
 
+nav .burger-lab { 
+   display: flex;
+   position: absolute;
+   display:block;
+   top: 20px;
+   right: 20px;
+   z-index: 10;
+   color: #E0B9B4;
+   font-size: 48px;
+}
+
+   #toggle:checked + div > .menu {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   position: absolute;
+   top: 80px;
+   right: 0;
+   background-color: #fff;
+   /* z-index: 1; */
+}
+
+
 /* --------Min screen 900px --------- */
 
 @media screen and (min-width:900px){
-
    #toggle {
       display: none;
    }
@@ -563,7 +585,9 @@ input[type="submit"].bouton-form-bout:hover {
 .menu {
    position: relative;
 }
-
+nav .burger-lab {
+   display: none;
+}
 }
 
 /* -------------- Max width --------- */
@@ -577,48 +601,6 @@ input[type="submit"].bouton-form-bout:hover {
    }
 }
 
-
-
-   nav .burger-lab { 
-   display: flex;
-   position: absolute;
-   display:block;
-   top: 20px;
-   right: 20px;
-   z-index: 10;
-   color: #E0B9B4;
-   font-size: 48px;
-}
-
-
-
-#toggle:checked + div > .menu {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   position: absolute;
-   top: 80px;
-   right: 0;
-   background-color: #fff;
-   /* z-index: 1; */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* =================================   Media Queries  ====================*/
 
 /* -------------Max screen 1200px-------- */
@@ -629,7 +611,7 @@ input[type="submit"].bouton-form-bout:hover {
    display: none;
    }
 
-   }
+}
 
 /* -------------Max screen 960px-------- */
 
@@ -641,58 +623,42 @@ input[type="submit"].bouton-form-bout:hover {
 /* -------------Max screen 900px-------- */
 
 @media screen and (max-width:900px){
-/* Menu de Navigation */
-   ul {
-      flex-direction: column;
-   align-items: center;
-   }
-   .rencontrer a {
-      height: 10%;
-   }
 /* Page 3 Commander */
-.wraper-form {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   padding-bottom: 20px;
-   padding-top: 20px;
-   color: white;
-}
+   .wraper-form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      color: white;
+      }
 
-.top-form {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   }
-   .titre-votre-commande {
-      width: 100%;
-   }
-   .vertical-line {
-   display: none;
-   }
-   .left-form h2, .right-form h2 {
-      text-align: center;
-   }
-   .left-form {
-    padding-right: 0px;
-   } 
-   .right-form {
-   padding-left: 0px;
-   }
-   .wraper-form{
+   .top-form {
       display: flex;
       flex-direction: column;
       align-items: center;
       }
-
+      .titre-votre-commande {
+         width: 100%;
+      }
+      .vertical-line {
+      display: none;
+      }
+      .left-form h2, .right-form h2 {
+         text-align: center;
+      }
+      .left-form {
+      padding-right: 0px;
+      } 
+      .right-form {
+      padding-left: 0px;
+      }
+   .wraper-form{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+     }
 }
-
-
-
-
-
-
-
 
 /* -------------Max screen 781px-------- */
 
@@ -703,19 +669,13 @@ input[type="submit"].bouton-form-bout:hover {
       display: flex;
       flex-direction: column;
       align-items: center;
-      }
+   }
    .feuille1, .feuille2 {
       display: none;
-      }
+   }
 
 /* Page 2 Nous rencontrer */
    .lequipe-branche-verte {
       display: none; 
-      }
    }
-
-
-
-
-
-   
+}
