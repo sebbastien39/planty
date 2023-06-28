@@ -31,7 +31,7 @@ function themename_custom_logo_setup() {
 add_filter('wp_nav_menu_items', 'add_admin_link', 10, 2);
 function add_admin_link($items, $args){
     if( $args->theme_location == 'main-menu' && is_user_logged_in() ){
-        $items = $items . '<li class="menu menu-item admin"><a title="Admin" href="'. admin_url() .'">Admin</a></li>';
+        $items = $items . '<li class="menu menu-item admin"><a title="Admin" href="'. admin_url() .'"><span itemprop="name">Admin</span></a></li>';
     }
     return $items;
 }

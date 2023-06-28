@@ -15,10 +15,10 @@ header {
    display: flex;
    justify-content: space-between;
    align-items: center;
+   position: relative;
 }
 
 /* Logo */
-
 .custom-logo {
    padding-left: 37px;
 }
@@ -27,23 +27,22 @@ header {
 .menu {
    display: flex;
 }
-/* Apparence du menu */
 
+/* Apparence du menu */
 .menu-item {
    display: inline-flex;
 }
 
 li.menu-item.current-menu-item {
-align-items: center;
+   align-items: center;
 }
-
 
 li.menu-item.current-menu-item a.rencontrer {
    font-weight: bold;
 }
-/* Bouton Nous rencontrer */
 
-.rencontrer a {
+/* Bouton Nous rencontrer */
+.admin a, .rencontrer a {
    color: black;
    text-decoration: none;/*enlever la ligne sous le lien*/ 
    padding: 32px;
@@ -59,8 +58,7 @@ li.menu-item.current-menu-item a.rencontrer {
    order: 1;
 }
 
-/* Admin*/
-
+/* Bouton Admin*/
 .admin {
    order: 2; /* disposer Admin en second dans le Menu */
 }
@@ -79,6 +77,9 @@ li.menu-item.current-menu-item a.rencontrer {
  }
 
 /* Bouton Commander */
+.commande {
+   order: 3;
+}
 
 .commande a {
    color: white;
@@ -98,14 +99,9 @@ li.menu-item.current-menu-item a.rencontrer {
    color: white;
 }
 
-.commande {
-   order: 3;
-}
-
-/*======================== 1. Page accueil   ==========================*/
+/*======================== Page 1 Accueil   ==========================*/
 
 /* Canette */
-
 .canette-feuilles {
    background-color: #ECE2DA;
    border-bottom-right-radius: 500px 80px;
@@ -126,7 +122,7 @@ li.menu-item.current-menu-item a.rencontrer {
    z-index: 0;
 }
 
-.feuille2{
+.feuille2 {
    position: relative;
    right: 220px;
    bottom: -100px;
@@ -134,7 +130,6 @@ li.menu-item.current-menu-item a.rencontrer {
 }
 
 /* Quatre images */
-
 .quatre-images {
    background-color: #ECE2DA;
    border-bottom-right-radius: 500px 20px;
@@ -156,8 +151,7 @@ li.menu-item.current-menu-item a.rencontrer {
 	background:#C02E44 !important; 
 }
 
-/* Trois p */
-
+/* Trois p Ce qu'ils en pensent */
 .trois-p {
    padding-left: 50px;
    padding-right: 50px;
@@ -181,7 +175,6 @@ footer a:hover {
 /*=========================== 2. Page nous rencontrer ===================================*/
 
 /* Nous rencontrer */
-
 .nous-rencontrer {
    background-color: #ECE2DA;
    border-radius: 0px 0px 500px 500px / 0px 0px 80px 80px;
@@ -194,14 +187,13 @@ footer a:hover {
 }
 
 /* L'équipe */
-
 .lequipe-branche-verte {
    position: relative;
-   top: 35px;
+   bottom: -40px;
    width: 191px;
 }
-/* Nous contacter */
 
+/* Nous contacter */
 .nous-contacter {
    background-color: #ECE2DA;
    text-align: center;
@@ -209,13 +201,11 @@ footer a:hover {
 }
 
 /* Contact-form-7 */
-
 .nous-contacter-form {
    font-size: 25px;
    display: block;
    text-align: left;
 }
-
 
 .wpcf7-form-control-wrap, .wpcf7-not-valid-tip, .wpcf7-not-valid-tip span {
    display: flex;
@@ -233,7 +223,6 @@ footer a:hover {
    width: 383px;
    height: 73px;
 }
-
 
 .nous-contacter-form textarea {
    width: 383px;
@@ -263,9 +252,12 @@ textarea {
    font-size: 24px;
    background-color: #E0B9B4;
    color: white;
-   border-radius: 5px;
    border: none;
    margin-top: 30px;
+}
+
+input[type="submit"] {
+   border-radius: 7px;
 }
 
 .envoyer-bouton-f1:hover {
@@ -292,8 +284,8 @@ textarea {
 
 /* Bouton envoyer */
 .envoyer-bouton {
- border: none;
- padding-top: 50px;
+   border: none;
+   padding-top: 50px;
 }
 
 /* Nous rencontrer canette footer */
@@ -422,7 +414,6 @@ textarea {
 }
 
 /* Formulaire Gauche et Droite */
-
 .wraper-form {
    display: flex;
    justify-content: center;
@@ -466,7 +457,7 @@ textarea {
    padding-bottom: 25px;
 }
 
-label {
+.wraper-form label {
    font-size: 20px;
 }
 
@@ -502,6 +493,7 @@ input[type="submit"].bouton-form-bout {
    color: white;
    border: none;
    border-radius: 7px;
+   justify-content: center;
 }
 
 input[type="submit"].bouton-form-bout:hover {
@@ -509,7 +501,6 @@ input[type="submit"].bouton-form-bout:hover {
 }
 
 /* --------------------------- Burger Menu --------------------- */
-
 nav .burger-lab { 
    display: flex;
    position: absolute;
@@ -530,6 +521,7 @@ nav .burger-lab {
    right: 0;
    background-color: #fff;
 }
+
 /* ========================================= Media Queries Burger Menu === */
 /* --------Min screen 900px Burger Menu --------- */
 
@@ -551,6 +543,9 @@ nav .burger-lab {
    .menu {
       display: none;
    }
+   .menu-item.admin {
+      display: inline-flex;
+   }
    #toggle {
       display: none;
    }
@@ -570,10 +565,22 @@ nav .burger-lab {
 /* -------------Max screen 960px-------- */
 
 @media screen and (max-width:960px){
+/* Page 3 Commander */
    .top-form {
       flex-wrap: wrap;
    }
+   .img-top {
+      width: auto;
+      padding: 5px;
+   }
+   .img-top img {
+      width: 300px;
+   }
+   .ok {
+      width: 200px;
+   }
 }
+
 /* -------------Max screen 900px-------- */
 
 @media screen and (max-width:900px){
@@ -581,41 +588,47 @@ nav .burger-lab {
    .wraper-form {
       flex-direction: column;
       justify-content: center;
-      padding-bottom: 20px;
-      padding-top: 20px;
-      color: white;
       }
 
    .top-form {
       flex-direction: column;
       align-items: center;
       }
-      .titre-votre-commande {
+   .titre-votre-commande {
          width: 100%;
       }
-      .vertical-line {
+   .vertical-line {
       display: none;
       }
-      .left-form h2, .right-form h2 {
+   .left-form h2, .right-form h2 {
          text-align: center;
       }
-      .left-form {
+   .left-form {
       padding-right: 0px;
       } 
-      .right-form {
+   .right-form {
       padding-left: 0px;
       }
-      .wraper-form {
+   .wraper-form {
       flex-direction: column;
       align-items: center;
      }
+   .trait1 {
+      width: 700px;
+   }
+   .trait2 {
+      width: 700px;
+   }
+   .img-top {
+      justify-content: center;
+   }
 }
 
 /* -------------Max screen 781px-------- */
 
 @media screen and (max-width:781px){
 /* Page 1 Accueil */
-   .canette{
+   .canette {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -626,5 +639,50 @@ nav .burger-lab {
 /* Page 2 Nous rencontrer */
    .lequipe-branche-verte {
       display: none; 
+   }
+   .trois-p h3, .trois-p p {
+      text-align: center;
+   }
+/* Page 3 Commander */
+   .titre-commander {
+      font-size: 25px !important;
+   }
+   .trait1 {
+      width: 399px;
+   }
+   .trait2 {
+      width: 399px;
+   }
+}
+
+
+/* -------------Max screen 400px-------- */
+
+@media screen and (max-width:400px){
+/* Page 2 Nous rencontrer */
+   .nous-contacter-form .nom, .email {
+      width: 300px;
+      height: 73px;
+   }
+
+   .nous-contacter-form textarea {
+      width: 300px;
+      height: 237px;
+   }
+
+
+/* Page 3 Commander */
+   .nom-left-form, .prenom-left-form, .email-left-form {
+      width: 300px;
+   }
+
+   .adress-right-form, .code-right-form, .ville-right-form {
+      width: 300px;
+   }
+   .trait1 {
+      width: 200px;
+   }
+   .trait2 {
+      width: 200px;
    }
 }
